@@ -11,5 +11,8 @@
   "peerDependencies": {
     "jotai": "^1.7.2",
     "react": "^18.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.12"
   }
 }
