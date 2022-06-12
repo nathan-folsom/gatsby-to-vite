@@ -1,12 +1,13 @@
 import './App.css'
-import { styled } from "linaria/react";
 import Layout from "common/src/components/Layout"
+import Router from "./router/Router";
 
 
 
 function App() {
   return (
     <Layout>
+      <Router />
     </Layout>
   )
 }
