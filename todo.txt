@@ -1,0 +1,9 @@
+To Do list:
+
+1. Get basic Gatsby functionality to work in Vite
+    - Map /src/pages to <Route />s
+    - Implement /item matching
+
+2. Add extra react router features
+    - Nested routes with outlets
+
