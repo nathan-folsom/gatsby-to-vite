@@ -10,20 +10,42 @@ const Container = styled.div`
 `;
 
 const SideNav = styled.nav`
-  width: 20px;
-  height: 100%;
+  width: 60px;
+  background: steelblue;
+  z-index: 1;
+
+`;
+
+const Brand = styled.div`
+  width: 60px;
+  height: 60px;
+  background: darkslategray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:before {
+    content: "";
+    border-top: 30px solid #61dafb;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid #61dafb;
+    opacity: .2;
+  }
 `;
 
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 `;
 
 const Header = styled.div`
-  height: 40px;
+  height: 60px;
   display: flex;
   align-items: center;
   width: 100%;
+  padding: 0 20px;
+  background: burlywood;
 `;
 
 const PageContainer = styled.div`
@@ -31,14 +53,29 @@ const PageContainer = styled.div`
   flex: 1 1 100%;
 `;
 
+const Title = styled.h1`
+  color: deeppink;
+  position: relative;
+  font-size: 55px;
+
+  &:before {
+    content: "Hello";
+    color: #ffd0d7;
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    font-size: 55px;
+  }
+`;
+
 export type LayoutProps = PropsWithChildren<{}>;
 
 export default function Layout({ children }: LayoutProps) {
   return (
     <Container>
-      <SideNav />
+      <SideNav><Brand /></SideNav>
       <ContentContainer>
-        <Header/>
+        <Header><Title>Hello</Title></Header>
         <PageContainer>
           {children}
         </PageContainer>
