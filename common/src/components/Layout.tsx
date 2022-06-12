@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from "react";
 import { styled } from "linaria/react";
+import "../global.css";
 
 const Container = styled.div`
   width: 100vw;
